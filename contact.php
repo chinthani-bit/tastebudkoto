@@ -1,6 +1,6 @@
 <?php
-// contact.php - Booking form
-require_once 'config.php';
+
+include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
@@ -83,7 +83,7 @@ function validateBooking() {
             </div>
         </div>
 
-        <!-- Contact Information - YOUR ORIGINAL CONTENT -->
+        <!-- Contact Information  -->
         <div class="col-lg-4">
             <div class="contact-card">
                 <h3>Contact Information</h3>
