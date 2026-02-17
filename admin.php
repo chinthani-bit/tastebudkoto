@@ -1,6 +1,6 @@
-<?php
-// admin.php - View and delete bookings
-require_once 'config.php';
+<?php 
+    $title = "Booking & Contact - Tastebud Koto";
+    include 'db.php'; 
 
 // Delete booking
 if (isset($_GET['delete'])) {

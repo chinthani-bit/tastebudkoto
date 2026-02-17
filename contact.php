@@ -1,10 +1,7 @@
 <?php 
     $title = "Booking & Contact - Tastebud Koto";
     include 'db.php'; 
-?>
 
-
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
