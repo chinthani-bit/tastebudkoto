@@ -1,6 +1,6 @@
 <?php
-// about.php - Your story + Guest reviews
-require_once 'config.php';
+
+require_once 'db.php';
 
 // Handle review submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -43,7 +43,7 @@ function validateReview() {
 </header>
 
 <div class="container">
-    <!-- Timeline Section - YOUR ORIGINAL CONTENT -->
+    <!-- Timeline Section -->
     <section class="timeline">
         <h2>Our Story Timeline</h2>
         
@@ -72,7 +72,7 @@ function validateReview() {
         </div>
     </section>
 
-    <!-- Mission Section - YOUR ORIGINAL CONTENT -->
+    <!-- Mission Section -->
     <section class="mission-section">
         <h2>Our Mission</h2>
         <p>To create authentic cultural experiences that bridge Sri Lanka and Finland through hospitality, food, and nature.</p>
@@ -104,7 +104,7 @@ function validateReview() {
         </div>
     </section>
 
-    <!-- Reviews Section - NEW (but doesn't change your design) -->
+    <!-- Reviews Section -->
     <section style="margin: 50px 0;">
         <h2>Guest Reviews</h2>
         
@@ -150,7 +150,7 @@ function validateReview() {
         </div>
     </section>
 
-    <!-- Founders Section - YOUR ORIGINAL CONTENT -->
+    <!-- Founders Section -->
     <section class="founders">
         <h2>The Founders</h2>
         <div class="founder-card">
