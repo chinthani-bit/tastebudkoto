@@ -1,6 +1,6 @@
 <?php
-
-require_once 'db.php';
+    $title = "reviews - Tastebud Koto";
+    include'db.php';
 
 // Handle review submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
