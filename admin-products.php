@@ -1,7 +1,7 @@
 <?php
-
-require_once 'db.php';
-
+    $title = "Product catalog features - Tastebud Koto";
+    include 'db.php';
+    
 // CREATE - Add new product
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add'])) {
     $name = $_POST['name'];
