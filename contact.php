@@ -1,7 +1,10 @@
+<?php 
+    $title = "Booking & Contact - Tastebud Koto";
+    include 'db.php'; 
+?>
+
+
 <?php
-
-include 'db.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -116,7 +119,7 @@ function validateBooking() {
         </div>
     </div>
 
-    <!-- Map Section - YOUR ORIGINAL CONTENT -->
+    <!-- Map Section  -->
     <section class="my-5">
         <h2 class="text-center">Find Us in Finland</h2>
         <div class="map-placeholder text-center">
