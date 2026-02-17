@@ -1,8 +1,6 @@
 <?php
-// experiences.php - Show products from database
-require_once 'config.php';
+require_once 'db.php';
 
-// Get all products for display
 $products = $pdo->query("SELECT * FROM products")->fetchAll();
 
 include 'header.php';
@@ -17,7 +15,7 @@ include 'header.php';
 </header>
 
 <div class="container">
-    <!-- Seasonal Experiences (Static - unchanged) -->
+    <!-- Seasonal Experiences -->
     <section>
         <h2>Seasonal Activities</h2>
         <div class="season-cards">
@@ -45,7 +43,7 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Culinary Experiences (Static - unchanged) -->
+    <!-- Culinary Experiences -->
     <section class="culinary-section">
         <h2>Culinary Experiences</h2>
         <div class="culinary-cards">
@@ -93,7 +91,7 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Taste Bud Foods Products - NOW FROM DATABASE -->
+    <!-- Taste Bud Foods Products -->
     <section>
         <h2>Our Taste Bud Foods Products</h2>
         
@@ -109,7 +107,7 @@ include 'header.php';
                 <?php endforeach; ?>
             </div>
         <?php else: ?>
-            <!-- Fallback static products if database empty -->
+            
             <div class="product-cards">
                 <div class="product-card">
                     <img src="images/kithul-pani.jpg" alt="Kithul Products" class="product-image">
