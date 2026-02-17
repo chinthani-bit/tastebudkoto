@@ -1,5 +1,6 @@
 <?php
-require_once 'db.php';
+    $title = "Product catalog features - Tastebud Koto";
+    include 'db.php';
 
 $products = $pdo->query("SELECT * FROM products")->fetchAll();
 
