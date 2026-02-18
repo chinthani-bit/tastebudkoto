@@ -12,12 +12,12 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.php" class="logo">
+            <a href="home.php" class="logo">
                 <img src="images/logo.png" alt="TasteBudKoto Logo" class="logo-img">
                 <span>TasteBudKoto</span>
             </a>
             <div class="nav-links">
-                <a href="index.php">Home</a>
+                <a href="home.php">Home</a>
                 <a href="about.php">Our Story</a>
                 <a href="experiences.php">Experiences</a>
                 <a href="gallery.php">Gallery</a>
