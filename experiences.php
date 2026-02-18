@@ -1,9 +1,5 @@
 <?php
-    $title = "Product catalog features - Tastebud Koto";
-    include 'db.php';
-
-$products = $pdo->query("SELECT * FROM products")->fetchAll();
-
+$title = "Experiences - TasteBudKoto";
 include 'header.php';
 ?>
 
@@ -15,6 +11,7 @@ include 'header.php';
     </div>
 </header>
 
+<!-- Main Content -->
 <div class="container">
     <!-- Seasonal Experiences -->
     <section>
@@ -92,46 +89,52 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Taste Bud Foods Products -->
+    <!-- Taste Bud Foods Products - HARD CODED (Your Original) -->
     <section>
         <h2>Our Taste Bud Foods Products</h2>
-        
-        <?php if (count($products) > 0): ?>
-            <div class="product-cards">
-                <?php foreach ($products as $p): ?>
-                <div class="product-card">
-                    <img src="images/<?php echo $p['image'] ?: 'product-placeholder.jpg'; ?>" alt="<?php echo $p['name']; ?>" class="product-image">
-                    <h4><?php echo $p['name']; ?></h4>
-                    <p><?php echo $p['description']; ?></p>
-                    <div class="price">€<?php echo $p['price']; ?></div>
-                </div>
-                <?php endforeach; ?>
+        <div class="product-cards">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images/kithul-pani.jpg" alt="Kithul Products" class="product-image">
+                <h4>Kithul Treacle & Products</h4>
+                <p>Pure traditional Sri Lankan sweetener, jaggery, and pancake mixes.</p>
+                <div class="price">From €12.90</div>
+                
+                <!-- SIMPLE ORDER BUTTON -->
+                <a href="order-product.php?product=Kithul+Treacle&price=12.90" 
+                   style="display: inline-block; background: #e67e22; color: white; padding: 8px 15px; margin-top: 10px; text-decoration: none; border-radius: 5px;">
+                    Order Now
+                </a>
             </div>
-        <?php else: ?>
             
-            <div class="product-cards">
-                <div class="product-card">
-                    <img src="images/kithul-pani.jpg" alt="Kithul Products" class="product-image">
-                    <h4>Kithul Treacle & Products</h4>
-                    <p>Pure traditional Sri Lankan sweetener, jaggery, and pancake mixes.</p>
-                    <div class="price">From €12.90</div>
-                </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="images/Spices-villa.jpg" alt="Curry Mixes" class="product-image">
+                <h4>Dehydrated Curry Mixes</h4>
+                <p>Just add water for authentic Sri Lankan curries.</p>
+                <div class="price">From €8.50</div>
                 
-                <div class="product-card">
-                    <img src="images/Spices-villa.jpg" alt="Curry Mixes" class="product-image">
-                    <h4>Dehydrated Curry Mixes</h4>
-                    <p>Just add water for authentic Sri Lankan curries.</p>
-                    <div class="price">From €8.50</div>
-                </div>
-                
-                <div class="product-card">
-                    <img src="images/Food-villa.jpg" alt="Flour Blends" class="product-image">
-                    <h4>Traditional Flour Blends</h4>
-                    <p>Authentic Sri Lankan flour mixes for traditional dishes.</p>
-                    <div class="price">From €6.90</div>
-                </div>
+                <!-- SIMPLE ORDER BUTTON -->
+                <a href="order-product.php?product=Curry+Mixes&price=8.50" 
+                   style="display: inline-block; background: #e67e22; color: white; padding: 8px 15px; margin-top: 10px; text-decoration: none; border-radius: 5px;">
+                    Order Now
+                </a>
             </div>
-        <?php endif; ?>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="images/Food-villa.jpg" alt="Flour Blends" class="product-image">
+                <h4>Traditional Flour Blends</h4>
+                <p>Authentic Sri Lankan flour mixes for traditional dishes.</p>
+                <div class="price">From €6.90</div>
+                
+                <!-- SIMPLE ORDER BUTTON -->
+                <a href="order-product.php?product=Flour+Blends&price=6.90" 
+                   style="display: inline-block; background: #e67e22; color: white; padding: 8px 15px; margin-top: 10px; text-decoration: none; border-radius: 5px;">
+                    Order Now
+                </a>
+            </div>
+        </div>
     </section>
 </div>
 
