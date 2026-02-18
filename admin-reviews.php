@@ -1,6 +1,8 @@
 <?php
-    $title = "reviews - Tastebud Koto";
-    include'db.php';
+// admin-reviews.php - Manage Guest Reviews
+// MEMBER 3: Delete reviews
+
+require_once 'config.php';
 
 // DELETE review
 if (isset($_GET['delete'])) {
@@ -28,7 +30,6 @@ include 'header.php';
                     <p style="margin-top: 10px;"><?php echo $r['comment']; ?></p>
                     <small><?php echo $r['created_at']; ?></small>
                 </div>
-
                 <div>
                     <a href="?delete=<?php echo $r['id']; ?>" 
                        onclick="return confirm('Delete this review?')"
