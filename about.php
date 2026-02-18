@@ -1,6 +1,6 @@
 <?php
     $title = "reviews - Tastebud Koto";
-    include'db.php';
+    include 'db.php';
 
 // Handle review submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -9,12 +9,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $comment = $_POST['comment'];
     
     $sql = "INSERT INTO reviews (name, rating, comment) VALUES ('$name', '$rating', '$comment')";
-    $pdo->exec($sql);
-    $success = "Thank you for your review!";
+    
+    // FIXED: Using $conn instead of $pdo
+    if ($conn->query($sql) === TRUE) {
+        $success = "Thank you for your review!";
+    }
 }
 
-// Get all reviews
-$reviews = $pdo->query("SELECT * FROM reviews ORDER BY id DESC")->fetchAll();
+
+$reviews = [];
+$result = $conn->query("SELECT * FROM reviews ORDER BY id DESC");
+if ($result && $result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $reviews[] = $row;
+    }
+}
 
 include 'header.php';
 ?>
@@ -113,13 +122,17 @@ function validateReview() {
         <?php endif; ?>
         
         <!-- Display reviews -->
-        <?php foreach ($reviews as $r): ?>
-        <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px;">
-            <strong><?php echo $r['name']; ?></strong> - 
-            <span style="color: #e67e22;"><?php echo str_repeat('⭐', $r['rating']); ?></span>
-            <p><?php echo $r['comment']; ?></p>
-        </div>
-        <?php endforeach; ?>
+        <?php if (!empty($reviews)): ?>
+            <?php foreach ($reviews as $r): ?>
+            <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px;">
+                <strong><?php echo $r['name']; ?></strong> - 
+                <span style="color: #e67e22;"><?php echo str_repeat('⭐', $r['rating']); ?></span>
+                <p><?php echo $r['comment']; ?></p>
+            </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>No reviews yet. Be the first to share your experience!</p>
+        <?php endif; ?>
         
         <!-- Add review form -->
         <div style="background: #f8f9fa; padding: 30px; margin-top: 40px; border-radius: 8px;">
