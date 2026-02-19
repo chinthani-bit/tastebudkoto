@@ -30,21 +30,29 @@ Additionally, implemented an interactive gallery filter using JavaScript that al
 **Code Files:**
 
 contact.php - Booking form with JavaScript validation
+
 admin.php - Admin panel to view/delete bookings
+
 gallery.php - Gallery with JavaScript filter
+
 db.php - Database connection
 
 **Links:**
 
 Booking Form:   http://shell.hamk.fi/~bbcap25_14/tastebudkoto/contact.php
+
 Gallery Filter: http://shell.hamk.fi/~bbcap25_14/tastebudkoto/gallery.php
+
 Admin Panel:    http://shell.hamk.fi/~bbcap25_14/tastebudkoto/admin.php
 
 **CRUD Operations:**
 
 Create: Booking form submits to bookings table
+
 Read: Admin panel displays all bookings
+
 Delete: Admin can delete bookings
+
 JavaScript: Form validation and gallery filter with onclick events
 
 **Feature 2** (Elakawage Don Dilini): Product Order System
@@ -54,52 +62,68 @@ A product catalog displaying Taste Bud Foods products with "Order Now" buttons. 
 **Code Files:**
 
 experiences.php - Displays products with order buttons
+
 order-product.php - Order form with JavaScript validation
+
 admin-orders.php - Admin panel to view/delete orders
 
 **Links:**
 
 Products Page:  http://shell.hamk.fi/~bbcap25_14/tastebudkoto/experiences.php
+
 Order Form:     http://shell.hamk.fi/~bbcap25_14/tastebudkoto/order-product.php
+
 Admin Orders:   http://shell.hamk.fi/~bbcap25_14/tastebudkoto/admin-orders.php
 
 **CRUD Operations:**
 
 Create: Order form submits to orders table
+
 Read: Admin panel displays all orders
+
 Delete: Admin can delete orders
+
 JavaScript: Form validation with onsubmit event
 
 **Feature 3** (Samaraweera Kushani): Guest Reviews System
+
 A review system where guests can share their experiences. Users submit reviews with name, rating, and comments. Reviews are displayed on the About page and can be moderated by admin.
 
 **Code Files:**
 about.php - Displays reviews and submission form
+
 admin-reviews.php - Admin panel to delete reviews
 
 **Links:**
 
 Reviews Page: http://shell.hamk.fi/~bbcap25_14/tastebudkoto/about.php
+
 Admin Reviews: http://shell.hamk.fi/~bbcap25_14/tastebudkoto/admin-reviews.php
 
 **CRUD Operations:**
 
 Create: Review form submits to reviews table
+
 Read: About page displays all approved reviews
+
 Delete: Admin can delete inappropriate reviews
+
 JavaScript: Form validation with minimum 10 characters
 
 # Database Tables
 
 
 Table 1 (Chinthani Hewavitharana): bookings (Stores villa booking requests from contact form)
+
 Table 2 (Elakawage Don Dilini): Orders  (Stores product orders placed by customers)
+
 Table 3 (CSamaraweera Kushani): reviews (Stores guest reviews and ratings)
 
 
 ## Database ER Diagram
 
 ![TasteBudKoto Database ER Diagram](images/ER_Diagram.jpeg)
+
 Tables are independent with no foreign key relationships, each serving a separate feature.
 
 
