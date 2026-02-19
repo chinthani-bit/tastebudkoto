@@ -2,7 +2,7 @@
 
 // MEMBER 3: Delete reviews
 
-require_once 'db.php';  
+include 'db.php'; 
 
 // DELETE review
 if (isset($_GET['delete'])) {
