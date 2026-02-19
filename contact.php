@@ -1,6 +1,6 @@
 <?php 
-    $title = "Booking & Contact - Tastebud Koto";
-    include 'db.php'; 
+$title = "Booking & Contact - Tastebud Koto";
+include 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
@@ -11,8 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $sql = "INSERT INTO bookings (name, email, booking_date, guests, message) 
             VALUES ('$name', '$email', '$date', '$guests', '$message')";
-    $pdo->exec($sql);
-    $success = "Booking request sent successfully!";
+    
+    if ($conn->query($sql) === TRUE) {
+        $success = "Booking request sent successfully!";
+    }
 }
 
 include 'header.php';
@@ -36,23 +38,26 @@ function validateBooking() {
 </script>
 
 <!-- Page Header -->
-<header class="page-header" style="background: #2d5a27; color: white; text-align: center; padding: 50px 0;">
-    <h1>Contact Us</h1>
-    <p>Get in touch to book your Finnish-Sri Lankan experience</p>
+ <link rel="stylesheet" href="css/contact.css">
+<header class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch to book your Finnish-Sri Lankan experience</p>
+    </div>
 </header>
 
 <main class="container my-5">
     <?php if (isset($success)): ?>
-        <div style="background: #d4edda; color: #155724; padding: 15px; margin-bottom: 20px;"><?php echo $success; ?></div>
+        <div class="alert-success"><?php echo $success; ?></div>
     <?php endif; ?>
 
-    <div class="row g-4">
+    <div class="row">
         <!-- Contact Form -->
         <div class="col-lg-8">
             <div class="contact-card">
                 <h2>Send Us a Message</h2>
                 <form method="POST" onsubmit="return validateBooking()">
-                    <div class="row mb-3">
+                    <div class="row">
                         <div class="col-md-6">
                             <label>Full Name *</label>
                             <input type="text" id="name" name="name" class="form-control">
@@ -63,27 +68,27 @@ function validateBooking() {
                         </div>
                     </div>
                     
-                    <div class="mb-3">
+                    <div class="form-group">
                         <label>Preferred Date *</label>
                         <input type="date" id="date" name="date" class="form-control">
                     </div>
                     
-                    <div class="mb-3">
+                    <div class="form-group">
                         <label>Number of Guests *</label>
                         <input type="number" id="guests" name="guests" min="1" max="6" value="2" class="form-control">
                     </div>
                     
-                    <div class="mb-3">
+                    <div class="form-group">
                         <label>Your Message</label>
                         <textarea name="message" rows="4" class="form-control"></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-orange btn-lg w-100">Send Message</button>
+                    <button type="submit" class="btn-submit">Send Message</button>
                 </form>
             </div>
         </div>
 
-        <!-- Contact Information  -->
+        <!-- Contact Information -->
         <div class="col-lg-4">
             <div class="contact-card">
                 <h3>Contact Information</h3>
@@ -105,22 +110,22 @@ function validateBooking() {
                 
                 <div class="contact-item">
                     <h5><i class="fas fa-info-circle"></i> Booking Information</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-orange"></i> Check-in: 15:00</li>
-                        <li><i class="fas fa-check text-orange"></i> Check-out: 11:00</li>
-                        <li><i class="fas fa-check text-orange"></i> Minimum stay: 2 nights</li>
-                        <li><i class="fas fa-check text-orange"></i> Max capacity: 6 guests</li>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Check-in: 15:00</li>
+                        <li><i class="fas fa-check"></i> Check-out: 11:00</li>
+                        <li><i class="fas fa-check"></i> Minimum stay: 2 nights</li>
+                        <li><i class="fas fa-check"></i> Max capacity: 6 guests</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Map Section  -->
-    <section class="my-5">
-        <h2 class="text-center">Find Us in Finland</h2>
-        <div class="map-placeholder text-center">
-            <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Find Us in Finland</h2>
+        <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
             <h3>Hämeenlinna Region</h3>
             <p>Located in the beautiful lake district of Southern Finland</p>
             <p>Approximately 1 hour from Helsinki by train or car</p>

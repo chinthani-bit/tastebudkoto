@@ -1,16 +1,24 @@
 <?php
-    $title = "reviews - Tastebud Koto";
-    include'db.php';
+
+// MEMBER 3: Delete reviews
+
+include 'db.php'; 
 
 // DELETE review
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    $pdo->exec("DELETE FROM reviews WHERE id = $id");
+    $conn->query("DELETE FROM reviews WHERE id = $id");  
     header('Location: admin-reviews.php');
 }
 
 // READ all reviews
-$reviews = $pdo->query("SELECT * FROM reviews ORDER BY id DESC")->fetchAll();
+$result = $conn->query("SELECT * FROM reviews ORDER BY id DESC");  
+$reviews = [];
+if ($result && $result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $reviews[] = $row;
+    }
+}
 
 include 'header.php';
 ?>
@@ -28,7 +36,6 @@ include 'header.php';
                     <p style="margin-top: 10px;"><?php echo $r['comment']; ?></p>
                     <small><?php echo $r['created_at']; ?></small>
                 </div>
-
                 <div>
                     <a href="?delete=<?php echo $r['id']; ?>" 
                        onclick="return confirm('Delete this review?')"
