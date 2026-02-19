@@ -90,7 +90,7 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Taste Bud Foods Products - HARD CODED (Your Original) -->
+    <!-- Taste Bud Foods Products -->
     <section>
         <h2>Our Taste Bud Foods Products</h2>
         <div class="product-cards">
