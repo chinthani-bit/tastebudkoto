@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $sql = "INSERT INTO reviews (name, rating, comment) VALUES ('$name', '$rating', '$comment')";
     
-    // FIXED: Using $conn instead of $pdo
+    
     if ($conn->query($sql) === TRUE) {
         $success = "Thank you for your review!";
     }
@@ -25,8 +25,8 @@ if ($result && $result->num_rows > 0) {
     }
 }
 
-include 'header.php';
-?>
+include 'header.php';?>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- JavaScript validation -->
 <script>
