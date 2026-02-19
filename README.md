@@ -22,7 +22,9 @@ Created Tables
  **Feature 2 (Elakawage Don Dilini)**: Product Order System.
 
  **Feature 3 (Samaraweera Kushani)**: Guest Reviews System.
+ 
 
+**Feature 1 (Chinthani Hewavitharana)**: Villa Booking System & Gallery Filter.
 
 
 A complete booking system that allows guests to reserve the villa. Users fill out a booking form with their details, check-in date, and number of guests. All bookings are stored in the bookings database table and can be managed by admin with full CRUD operations.
