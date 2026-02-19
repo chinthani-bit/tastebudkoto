@@ -2,7 +2,7 @@
 // admin-reviews.php - Manage Guest Reviews
 // MEMBER 3: Delete reviews
 
-require_once 'config.php';
+require_once 'db.php';
 
 // DELETE review
 if (isset($_GET['delete'])) {
