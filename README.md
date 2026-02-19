@@ -2,7 +2,7 @@
 Finnish-Sri Lankan lakeside villa website
 (Team No -08)
 
-README.md - 
+README.md 
 # Project Overview
 TasteBudKoto is a fictional villa and culinary experience website located in Hämeenlinna, Finland. The project was created by three Sri Lankan students studying Computer Applications at HAMK University of Applied Sciences as part of our academic coursework.
 
@@ -17,72 +17,72 @@ Created Tables
 
 # Features
 
- Feature 1 (Chinthani Hewavitharana): Villa Booking System & Gallery Filter.
- Feature 2 (Elakawage Don Dilini): Product Order System.
- Feature 3 (Samaraweera Kushani): Guest Reviews System.
+ **Feature 1 (Chinthani Hewavitharana)**: Villa Booking System & Gallery Filter.
+ **Feature# 2 (Elakawage Don Dilini)**: Product Order System.
+ **Feature 3 (Samaraweera Kushani)**: Guest Reviews System.
 
-Feature 1 (Chinthani Hewavitharana): Villa Booking System & Gallery Filter
+**Feature 1** (Chinthani Hewavitharana): Villa Booking System & Gallery Filter
 
 A complete booking system that allows guests to reserve the villa. Users fill out a booking form with their details, check-in date, and number of guests. All bookings are stored in the bookings database table and can be managed by admin with full CRUD operations.
 
 Additionally, implemented an interactive gallery filter using JavaScript that allows users to filter images by category (Villa, Nature, Food) with simple button click events.
 
-Code Files:
+**Code Files:**
 
 contact.php - Booking form with JavaScript validation
 admin.php - Admin panel to view/delete bookings
 gallery.php - Gallery with JavaScript filter
 db.php - Database connection
 
-Links:
+**Links:**
 
 Booking Form:   http://shell.hamk.fi/~bbcap25_14/tastebudkoto/contact.php
 Gallery Filter: http://shell.hamk.fi/~bbcap25_14/tastebudkoto/gallery.php
 Admin Panel:    http://shell.hamk.fi/~bbcap25_14/tastebudkoto/admin.php
 
-CRUD Operations:
+**CRUD Operations:**
 
 Create: Booking form submits to bookings table
 Read: Admin panel displays all bookings
 Delete: Admin can delete bookings
 JavaScript: Form validation and gallery filter with onclick events
 
-Feature 2 (Elakawage Don Dilini): Product Order System
+**Feature 2** (Elakawage Don Dilini): Product Order System
 
 A product catalog displaying Taste Bud Foods products with "Order Now" buttons. Users can place orders for products like Kithul Treacle, Curry Mixes, and Flour Blends. Orders are saved to the orders database table and can be managed by admin.
 
-Code Files:
+**Code Files:**
 
 experiences.php - Displays products with order buttons
 order-product.php - Order form with JavaScript validation
 admin-orders.php - Admin panel to view/delete orders
 
-Links:
+**Links:**
 
 Products Page:  http://shell.hamk.fi/~bbcap25_14/tastebudkoto/experiences.php
 Order Form:     http://shell.hamk.fi/~bbcap25_14/tastebudkoto/order-product.php
 Admin Orders:   http://shell.hamk.fi/~bbcap25_14/tastebudkoto/admin-orders.php
 
-CRUD Operations:
+**CRUD Operations:**
 
 Create: Order form submits to orders table
 Read: Admin panel displays all orders
 Delete: Admin can delete orders
 JavaScript: Form validation with onsubmit event
 
-Feature 3 (Samaraweera Kushani): Guest Reviews System
+**Feature 3** (Samaraweera Kushani): Guest Reviews System
 A review system where guests can share their experiences. Users submit reviews with name, rating, and comments. Reviews are displayed on the About page and can be moderated by admin.
 
-Code Files:
+**Code Files:**
 about.php - Displays reviews and submission form
 admin-reviews.php - Admin panel to delete reviews
 
-Links:
+**Links:**
 
 Reviews Page: http://shell.hamk.fi/~bbcap25_14/tastebudkoto/about.php
 Admin Reviews: http://shell.hamk.fi/~bbcap25_14/tastebudkoto/admin-reviews.php
 
-CRUD Operations:
+**CRUD Operations:**
 
 Create: Review form submits to reviews table
 Read: About page displays all approved reviews
