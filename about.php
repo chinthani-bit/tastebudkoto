@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $sql = "INSERT INTO reviews (name, rating, comment) VALUES ('$name', '$rating', '$comment')";
     
-    // FIXED: Using $conn instead of $pdo
+    
     if ($conn->query($sql) === TRUE) {
         $success = "Thank you for your review!";
     }
