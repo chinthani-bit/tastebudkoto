@@ -21,21 +21,22 @@ function showCategory(category) {
     }
 }
 </script>
-<div style="text-align: center; margin: 30px 0;">
-    <button onclick="showCategory('all')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">All</button>
-    <button onclick="showCategory('villa')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">Villa</button>
-    <button onclick="showCategory('nature')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">Nature</button>
-    <button onclick="showCategory('food')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">Food</button>
-</div>
+
 
 <!-- Page Header -->
+<link rel="stylesheet" href="css/gallery.css">
 <header class="page-header">
     <div>
         <h1>Our Gallery</h1>
         <p>Experience the blend of Sri Lankan and Finnish culture</p>
     </div>
 </header>
-
+<div style="text-align: center; margin: 30px 0;">
+    <button onclick="showCategory('all')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">All</button>
+    <button onclick="showCategory('villa')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">Villa</button>
+    <button onclick="showCategory('nature')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">Nature</button>
+    <button onclick="showCategory('food')" style="background: #2d5a27; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">Food</button>
+</div>
 <div class="container">
     <!-- Gallery Introduction -->
     <div class="gallery-intro">

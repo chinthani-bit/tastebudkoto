@@ -4,6 +4,7 @@ include 'header.php';
 ?>
 
 <!-- Page Header -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <header class="page-header">
     <div>
         <h1>Unique Experiences</h1>
@@ -89,7 +90,7 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Taste Bud Foods Products - HARD CODED (Your Original) -->
+    <!-- Taste Bud Foods Products -->
     <section>
         <h2>Our Taste Bud Foods Products</h2>
         <div class="product-cards">
